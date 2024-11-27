@@ -1,0 +1,66 @@
+@keyframes neonPulse {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { opacity: 0.8; }
+}
+
+@keyframes gridMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 50px 50px; }
+}
+
+.neon-text {
+  text-shadow: 0 0 10px #4ade80,
+               0 0 20px #4ade80,
+               0 0 30px #4ade80;
+}
+
+.neon-border {
+  box-shadow: 0 0 10px #4ade80,
+              inset 0 0 5px #4ade80;
+}
+
+.grid-background {
+  background-image: 
+    linear-gradient(rgba(74, 222, 128, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74, 222, 128, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+}
+
+.corner-accent {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #4ade80;
+  opacity: 0.5;
+  animation: neonPulse 2s infinite;
+}
+
+.corner-accent.top-left {
+  top: 20px;
+  left: 20px;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.corner-accent.top-right {
+  top: 20px;
+  right: 20px;
+  border-left: 0;
+  border-bottom: 0;
+}
+
+.corner-accent.bottom-left {
+  bottom: 20px;
+  left: 20px;
+  border-right: 0;
+  border-top: 0;
+}
+
+.corner-accent.bottom-right {
+  bottom: 20px;
+  right: 20px;
+  border-left: 0;
+  border-top: 0;
+}
